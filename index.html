@@ -4,6 +4,90 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HACKERUG06</title> 
+        <styles>
+                    body {
+                font-family: Arial, sans-serif;
+                background-color: rgb(12, 245, 206);
+            }
+            .icon {
+                width: 120px;
+                height: 120px;
+                margin-left: 560px;
+            }
+            .white {
+                color: rgb(8, 8, 8);
+                
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin-left: 400px;
+            }
+            nav {
+                display: flex;
+                justify-content:center;
+                background-color: rgb(174, 6, 240);
+                padding: 10px;
+            }
+            nav a {
+
+                color: white;  
+                padding:0;
+                margin: 0;
+                display: flex;
+                margin-left: 50px;
+                text-decoration: none;
+                text-align: center;
+            }
+            .image-grid {
+                display: grid;
+                gap: 10px;
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .image-item {
+                text-align: center;
+            }
+            .responsive-image {
+                width: 100%;
+                height: auto;
+            }
+            .description {
+                margin-top: 10px;
+                font-size: 16px;
+                color: #333;
+            }
+           
+            h3 {
+                color: rgb(174, 6, 240);
+            }
+            footer {
+                display: flex;
+                justify-content: center;
+                background-color: rgb(174, 6, 240);
+            }
+            .Insta {
+                display: flex;
+                padding: 10px;
+                color: white;  
+                padding:0;
+                margin: 0;
+                margin-right: 80%;
+                text-align: center;
+            }
+            /* media Queries*/
+            @media (max-width: 1024px) {
+                .image-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            @media (max-width: 768px) {
+                .image-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            @media (max-width: 480px) {
+                .image-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+    </styles>
     </head>
     <body> 
         <img src="neuto1.jpg" alt="Icon" class="icon">
