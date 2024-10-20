@@ -1,78 +1,175 @@
 <!DOCTYPE html>
-<html lang="eng">
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HACKERUG06 ICT SOLUTIONS</title> 
-           </head>
-    <body> 
-        <img src="neuto1.jpg" alt="Icon" class="icon">
-        <h1><span class="white">HACKERUG06 ICT SOLUTIONS</span></h1>            
-        <nav>
-           
-            <a href= "#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <section id="home">
-            <h3>HOME</h3>
-            <b><p>Welcome to <i>Hackerug06 ICT Solutions</i> - Empowering Your Business with Innovative ICT Solutions</p></b>
-            <p>At Hackerug06 ICT Solutions, we specialize in delivering commprehensive <b>Information and Communication Technology(ICT)</b> solutions that drive bussiness growth. With our expertise and cutting-edge technologies, we help organizations unlock new possibilities, improve efficiency, and secure thier digital future.</p>
-            <h3>Our Core Values:</h3>
-            <div class="image-grid">
-                <div class="image-item">
-                <img src="consult.jpg" width="250px" height="250px" alt="ict consultation" class="responsive-image"> <p class="description"><b>ICT Consultantation</b></p>
-            </div>
-            <div class="image-item">
-             <img src="coding.png" width="250px" height="300px" alt="coding"class="responsive-image"> <p class="description"><b>Coding</b></p>
-            </div>
-            <div class="image-item">
-            <img src="website-building.jpg" width="250px" height="250px" alt="ict consultation" class="responsive-image"> <p class="description"><b>Web Building</b></p>
-            </div>
-            <div class="image-item">
-                        <img src="Graphic designing.jpg" width="250px" height="250px" alt="graphic designing" class="responsive-image"> <p class="description"><b>Graphic Designing</b></p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACKERUG06 ICT Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensure the body takes full height of the viewport */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh; /* Ensure the body stretches to fill the viewport */
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 15px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    flex: 1; /* Allow the main content to take up the remaining space */
+    padding: 20px;
+}
+
+/* Responsive Images in Home Section */
+#home {
+    padding: 20px;
+}
+
+.responsive-images img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 10px 0;
+}
+
+/* About & Contact Sections */
+#about, #contact {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: auto;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 40px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .responsive-images img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>HACKERUG06 ICT Solutions</h1>
         </div>
-            </div>
-                <p><li><b>We deal in FRP bypass of any kind of phone</b></li></p>
-                <p><li><b>We sell different ICT gadgets like laptops, phones, digital cameras</b></li></p>
-                <p><li><b>We deal in all sorts of ICT gadgets and computer software, these include Digital Cameras</b></li></p>
-                <p><li><b>We deal with wifi-password cracking</b></li></p>
-                <p><li><b>We teach coding</b></li></p>
-                <p><li><b>We also have cracked premium apps like; Netflix, Capcut, Photoshop</b></li></p>
-                <p><li><b>We grow instagram accounts</b></li></p>
-                <p><li><b>We teach on how to make online business.</b></li></p>
-        </section>
-        <section id="about">
-            <h3>ABOUT</h3>
-            <p><b><i>Hackerug06 ICT Solutions</i></b> is a leading ICT solutions provider committed to helping businesses navigate the complexities of the digital world.</p>
-            <p>With a dedicated team of experienced professionals, we deliver innovative and customized technology solutions that enable our clients to achieve operational excellence.</p> 
-            <h4>Our Mission</h4>
-            <p>To provide cutting-edge ICT solutions that empower businesses to thrive in the digital age.</p>
-            <h4>Our Vision</h4>
-            <p>To be the premier ICT partner offering unmatched expertise and services that drive sustainable growth for our clients.</p>
-        </section>
-        <section id="contact">
-            <h3>CONTACT US;</h3>
-            <p><b>Address:</b></p>
-                <p>Kampala, Along Kisaasi-Kyanja Ring Road</p>
-            <p><b>Phone:</b></p>
-            <p>+256761399903</p>
-            <p>+256753979539</p>
-            <p><b>Email:</b></p>
-            <b><p><a href="https://wa.me/256761399903" style="text-decoration: none;">Whatsapp 1</a></p></b>
-            <b><p><a href="https://wa.me/256753979539" style="text-decoration: none;">Whatsapp 2</a></p></b>
-            <b><p><a href="hackerug06@gmail.com" style="text-decoration: none;">hackerug06@gmail.com</a></p></b>
-            <b><p><a href="hackerugg06@gmail.com" style="text-decoration: none;">hackerugg06@gmail.com</a></p></b>
-            <p><b>Follow us on:</b></p>
-            <div class="Insta">
-                <a href="instagram.com" style="text-decoration:none;">  <img src="instagram.jpg"width="20px" height="20px">&emsp;Instagram</a>
-                <a href="x.com"style="text-decoration: none;">&emsp;&emsp;<img src="x.jpg" width="20px" height="20px">&emsp;&emsp;X</a>
-            <a href="facebook.com"style="text-decoration: none;">&emsp;&emsp;<img src="fb.jpg" width="20px" height="20px">&emsp;&emsp;Facebook</a>          
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Hackerug06 ICT Solutions</h2>
+        
+        <div class="responsive-images">
+            <img src="consult.jpg" width="200px height="200px" alt="ICT Image 1">
+            <img src="Graphic designing.jpg"width="200px height="200px" alt="ICT Image 2">
         </div>
     </section>
-        <footer>
-            <p>&copy;Hackerug06 ICT Solutions. All rights reserved.</p>
-        </footer>
-    </body>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We provide top-notch ICT solutions for businesses and individuals.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>+256761399903.</p>
+        <p>+256753979539</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hackerug06 ICT Solutions. All rights reserved.</p>
+    </footer>
+</body>
 </html>
