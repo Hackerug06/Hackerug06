@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackerug06 | Full Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         :root {
             --primary-color: #3498db;
@@ -28,6 +27,7 @@
             background-color: #f9f9f9;
             color: var(--text-color);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* Header & Navigation */
@@ -69,6 +69,7 @@
         .nav-links {
             display: flex;
             gap: 2rem;
+            list-style: none;
         }
 
         .nav-links a {
@@ -89,6 +90,7 @@
             font-size: 1.5rem;
             cursor: pointer;
             color: var(--dark-color);
+            z-index: 1001;
         }
 
         /* Hero Section */
@@ -97,8 +99,49 @@
             display: flex;
             align-items: center;
             padding: 0 5%;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             margin-top: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            z-index: -2;
+        }
+
+        .coding-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.15;
+            overflow: hidden;
+        }
+
+        .code-line {
+            position: absolute;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: var(--primary-color);
+            white-space: nowrap;
+            animation: floatCode 15s linear infinite;
+        }
+
+        @keyframes floatCode {
+            0% {
+                transform: translateY(100vh);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
         }
 
         .hero-content {
@@ -626,6 +669,12 @@
             .skills-container, .projects-container {
                 grid-template-columns: 1fr;
             }
+
+            .whatsapp-popup {
+                width: calc(100% - 40px);
+                right: 20px;
+                bottom: 80px;
+            }
         }
 
         /* Animation */
@@ -653,7 +702,7 @@
                 <img src="https://via.placeholder.com/40x40/3498db/ffffff?text=H06" alt="Hackerug06 Logo" id="logo">
                 <span class="logo-text">Hackerug06</span>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -667,6 +716,9 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <!-- Animated Coding Background -->
+        <div class="coding-background" id="codingBackground"></div>
+        
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Hi, I'm <span>Hackerug06</span></h1>
@@ -714,28 +766,4 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="section-title">
-            <h2>My Projects</h2>
-            <p>Here are some of my recent projects showcasing my skills and expertise.</p>
-        </div>
-        <div class="projects-container">
-            <div class="project-card fade-in">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400/3498db/ffffff?text=E-Commerce" alt="E-Commerce Platform">
-                </div>
-                <div class="project-info">
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-featured online store with product management, cart functionality, and secure checkout.</p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#"><i class="fab fa-github"></i> Source Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class=
+    <section class="projects" 
