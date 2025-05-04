@@ -1,0 +1,36 @@
+/* Dark Theme */
+[data-theme="dark"] {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --text-color: #f5f5f5;
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --header-bg: rgba(30, 30, 30, 0.9);
+    --footer-bg: #121212;
+    --footer-text: #ecf0f1;
+}
+
+[data-theme="dark"] .theme-toggle .fa-moon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle .fa-sun {
+    display: block;
+}
+
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .portfolio-item {
+    border: 1px solid #333;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+    background: #2c2c2c;
+    border-color: #444;
+    color: #f5f5f5;
+}
+
+[data-theme="dark"] .portfolio-info p {
+    color: #aaa;
+}
