@@ -129,54 +129,115 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize code background
     initCodeBackground();
-});
-
-function initCodeBackground() {
-    const codeBg = document.getElementById('code-bg');
-    const codeLines = [
-        "function welcome() {",
-        "  console.log('Hello, World!');",
-        "  return 'Welcome to my portfolio';",
-        "}",
-        "",
-        "class Developer {",
-        "  constructor(name, skills) {",
-        "    this.name = name;",
-        "    this.skills = skills;",
-        "  }",
-        "",
-        "  buildProject(project) {",
-        "    return `Building ${project}...`;",
-        "  }",
-        "}",
-        "",
-        "const me = new Developer('Hackerug06', ",
-        "  ['JavaScript', 'Angular', 'Vue', 'Node.js']);",
-        "",
-        "me.buildProject('Awesome Website');",
-        "",
-        "// This code runs in the background",
-        "// Just like my skills powering your projects",
-        "",
-        "const express = require('express');",
-        "const app = express();",
-        "",
-        "app.get('/', (req, res) => {",
-        "  res.send('Hello from the backend!');",
-        "});",
-        "",
-        "app.listen(3000, () => {",
-        "  console.log('Server running on port 3000');",
-        "});",
-        "",
-        "// More code continues to scroll...",
-        "// Representing continuous learning and growth"
-    ];
     
-    codeLines.forEach(line => {
-        const codeLine = document.createElement('div');
-        codeLine.className = 'code-line';
-        codeLine.textContent = line;
-        codeBg.appendChild(codeLine);
-    });
-                                  }
+    // Enhanced Formspree Form Handling
+    const contactForm = document.querySelector('.contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            
+            // Create and show loading spinner
+            submitButton.innerHTML = `
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Sending...
+            `;
+            submitButton.disabled = true;
+            
+            try {
+                const formData = new FormData(this);
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success message
+                    showAlert('Message sent successfully!', 'success');
+                    this.reset();
+                } else {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'Form submission failed');
+                }
+            } catch (error) {
+                console.error('Form submission error:', error);
+                showAlert(`Failed to send message: ${error.message}`, 'error');
+            } finally {
+                // Reset button state
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+            }
+        });
+    }
+    
+    // Initialize code background
+    function initCodeBackground() {
+        const codeBg = document.getElementById('code-bg');
+        if (!codeBg) return;
+        
+        const codeLines = [
+            "function welcome() {",
+            "  console.log('Hello, World!');",
+            "  return 'Welcome to my portfolio';",
+            "}",
+            "",
+            "class Developer {",
+            "  constructor(name, skills) {",
+            "    this.name = name;",
+            "    this.skills = skills;",
+            "  }",
+            "",
+            "  buildProject(project) {",
+            "    return `Building ${project}...`;",
+            "  }",
+            "}",
+            "",
+            "const me = new Developer('Hackerug06', ",
+            "  ['JavaScript', 'Angular', 'Vue', 'Node.js']);",
+            "",
+            "me.buildProject('Awesome Website');",
+            "",
+            "// This code runs in the background",
+            "// Just like my skills powering your projects"
+        ];
+        
+        codeLines.forEach(line => {
+            const codeLine = document.createElement('div');
+            codeLine.className = 'code-line';
+            codeLine.textContent = line;
+            codeBg.appendChild(codeLine);
+        });
+    }
+    
+    // Show alert message
+    function showAlert(message, type = 'success') {
+        // Remove any existing alerts
+        const existingAlert = document.querySelector('.form-alert');
+        if (existingAlert) {
+            existingAlert.remove();
+        }
+        
+        // Create alert element
+        const alertElement = document.createElement('div');
+        alertElement.className = `form-alert alert-${type}`;
+        alertElement.textContent = message;
+        
+        // Position the alert near the form
+        const form = document.querySelector('.contact-form');
+        if (form) {
+            form.insertAdjacentElement('beforebegin', alertElement);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                alertElement.style.opacity = '0';
+                setTimeout(() => alertElement.remove(), 300);
+            }, 5000);
+        }
+    }
+});
