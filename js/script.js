@@ -81,12 +81,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectsGrid = document.querySelector('.projects-grid');
     const projects = [
         {
-            title: "E-commerce Platform",
+            title: "Upcoming Artist Website",
             description: "A full-featured online store with payment integration and admin dashboard.",
-            technologies: ["Angular", "Node.js", "MongoDB"],
+            technologies: ["typescript", "Node.js"],
             image: "https://via.placeholder.com/600x400?text=E-commerce+Platform",
-            liveLink: "#",
-            codeLink: "#"
+            liveLink: "https://shemaking0001.netlify.app/",
+            codeLink: "https://github.com/Hackerug06/shemaking"
         },
         {
             title: "Task Management App",
