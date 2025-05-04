@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const projects = [
         {
             title: "Upcoming Artist Website",
-            description: "A full-featured online store with payment integration and admin dashboard.",
+            description: "A full-featured online Music website for a Uganda upcoming artist Shema King.",
             technologies: ["typescript", "Node.js"],
             image: "assets/Home1.jpg",
             liveLink: "https://shemaking0001.netlify.app/",
@@ -90,19 +90,19 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             title: "Tic-Tac-Toe Game",
-            description: "A productivity application for managing tasks with team collaboration features.",
+            description: "A productivity neon tic-tac-toe game application.",
             technologies: ["Vue.js", "Firebase"],
             image: "assets/tic-tac-toe.jpg",
             liveLink: "https://neon-tic-tac-toe-game1.vercel.app/",
             codeLink: "https://github.com/Hackerug06/neon-tic-tac-toe"
         },
         {
-            title: "Mobile Fitness Tracker",
-            description: "Cross-platform mobile app for tracking workouts and nutrition.",
+            title: "Kids Calculator App",
+            description: "A kids mobile friendly calculator.",
             technologies: ["React Native", "TypeScript"],
-            image: "https://via.placeholder.com/600x400?text=Fitness+Tracker",
-            liveLink: "#",
-            codeLink: "#"
+            image: "calc.jpg",
+            liveLink: "https://hackerug06.github.io/calculator/",
+            codeLink: "https://github.com/Hackerug06/calculator"
         }
     ];
     
