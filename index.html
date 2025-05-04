@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Stack Developer</title>
+    <meta name="description" content="Professional portfolio of Hackerug06 - Full Stack Developer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="https://via.placeholder.com/32x32/3498db/ffffff?text=H06" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body class="light-theme">
     <!-- Theme Toggle -->
-    <button class="theme-toggle" id="themeToggle">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <i class="fas fa-moon"></i>
     </button>
 
@@ -18,16 +19,16 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="https://via.placeholder.com/40x40/3498db/ffffff?text=H06" alt="Hackerug06 Logo">
-                <span class="logo-text animated-heading">Hackerug06</span>
+                <img src="logo.jpg" alt="Hackerug06 Logo" width="40" height="40">
+                <span class="logo-text typed" id="typed"></span>
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button class="toggle-btn" id="toggleBtn">
+            <button class="toggle-btn" id="toggleBtn" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
@@ -38,125 +39,139 @@
         <div class="coding-background" id="codingBackground"></div>
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Hi, I'm <span class="highlight">Hackerug06</span></h1>
-                <h2>Full Stack Developer</h2>
-                <p class="hero-description">I create beautiful, functional websites and applications with cutting-edge technologies.</p>
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Hackerug06</span></h1>
+                <h2 class="hero-subtitle">Full Stack Developer</h2>
+                <p class="hero-description">I build exceptional digital experiences with modern web technologies.</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Hire Me</a>
-                    <a href="#projects" class="btn btn-secondary">My Work</a>
+                    <a href="#contact" class="btn btn-primary pulse">Hire Me</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://via.placeholder.com/600x400/3498db/ffffff?text=Developer" alt="Hackerug06">
+                <img src="assets/hero-image.png" alt="Hackerug06" width="600" height="400" loading="lazy">
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="section-title">
-            <h2>My Skills</h2>
-            <p>I specialize in full stack web development with expertise in multiple technologies and frameworks.</p>
-        </div>
-        <div class="skills-container">
-            <div class="skill-card">
-                <i class="fas fa-code"></i>
-                <h3>Frontend Development</h3>
-                <p>HTML5, CSS3, JavaScript, TypeScript, React, Angular, Vue.js</p>
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Skills</h2>
+                <p class="section-subtitle">Technologies I work with daily</p>
             </div>
-            <div class="skill-card">
-                <i class="fas fa-server"></i>
-                <h3>Backend Development</h3>
-                <p>Node.js, Express, RESTful APIs, Database Design, Authentication</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile Development</h3>
-                <p>React Native, Progressive Web Apps, Cross-platform Development</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-chalkboard-teacher"></i>
-                <h3>Teaching & Mentoring</h3>
-                <p>ICT Education, Coding Instruction, Technical Workshops</p>
+            <div class="skills-grid">
+                <!-- Skill items will be generated by JavaScript -->
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="section-title">
-            <h2>My Projects</h2>
-            <p>Here are some of my recent projects showcasing my skills and expertise.</p>
-        </div>
-        <div class="projects-container">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400/3498db/ffffff?text=E-Commerce" alt="E-Commerce Platform">
-                </div>
-                <div class="project-info">
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-featured online store with product management and secure checkout.</p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#"><i class="fab fa-github"></i> Source Code</a>
-                    </div>
-                </div>
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
             </div>
-            <!-- Add more project cards as needed -->
+            <div class="projects-grid">
+                <!-- Project items will be generated by JavaScript -->
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="section-title">
-            <h2>Get In Touch</h2>
-            <p>Have a project in mind or want to discuss potential opportunities?</p>
-        </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div class="contact-text">
-                        <h3>Phone</h3>
-                        <p><a href="tel:+256761399903">+256 761 399903</a></p>
-                        <p><a href="tel:+256753979539">+256 753 979539</a></p>
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+256761399903">+256 761 399903</a></p>
+                            <p><a href="tel:+256753979539">+256 753 979539</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p><a href="mailto:hackerug06@gmail.com">hackerug06@gmail.com</a></p>
+                            <p><a href="mailto:hackerugg06@gmail.com">hackerugg06@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Kampala, Uganda</p>
+                        </div>
                     </div>
                 </div>
-                <!-- Add more contact items -->
-            </div>
-            <div class="contact-form">
-                <h3>Send Me a Message</h3>
-                <form id="contactForm">
-                    <!-- Form fields here -->
+                <form class="contact-form" id="contactForm" netlify>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">Hackerug06</div>
-            <div class="social-links">
-                <a href="https://github.com/hackerug06" target="_blank"><i class="fab fa-github"></i></a>
-                <!-- Add more social links -->
-            </div>
-            <div class="copyright">
-                &copy; <span id="currentYear"></span> Hackerug06. All Rights Reserved.
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Hackerug06</div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/hackerug06" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/hackerug06" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/hackerug06" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <div class="copyright">
+                    &copy; <span id="currentYear"></span> Hackerug06. All rights reserved.
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/256753979539" class="whatsapp-float" id="whatsappFloat">
+    <a href="https://wa.me/256753979539" class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
-                </html>
+                    </html>
