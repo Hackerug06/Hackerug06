@@ -39,17 +39,47 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
+    const navContent = document.querySelector('.nav-content');
     
     hamburger.addEventListener('click', function() {
         hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
+        navContent.classList.toggle('active');
+        
+        // Add mobile social links when menu opens
+        if (hamburger.classList.contains('active')) {
+            const mobileSocial = document.createElement('div');
+            mobileSocial.className = 'mobile-social';
+            mobileSocial.innerHTML = `
+                <a href="https://github.com/hackerug06" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://youtube.com/hackerug06" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://twitter.com/hackerug06" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/hackerug06" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/hackerug06" target="_blank"><i class="fab fa-facebook"></i></a>
+            `;
+            
+            // Check if mobile social already exists
+            const existingMobileSocial = document.querySelector('.mobile-social');
+            if (!existingMobileSocial) {
+                navContent.appendChild(mobileSocial);
+            }
+        } else {
+            // Remove mobile social when menu closes
+            const mobileSocial = document.querySelector('.mobile-social');
+            if (mobileSocial) {
+                mobileSocial.remove();
+            }
+        }
     });
     
     // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+            navContent.classList.remove('active');
+            const mobileSocial = document.querySelector('.mobile-social');
+            if (mobileSocial) {
+                mobileSocial.remove();
+            }
         });
     });
     
