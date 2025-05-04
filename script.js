@@ -1,6 +1,4 @@
 // DOM Elements
-const themeToggle = document.getElementById('themeToggle');
-const body = document.body;
 const toggleBtn = document.getElementById('toggleBtn');
 const navLinks = document.getElementById('navLinks');
 const navItems = document.querySelectorAll('.nav-link');
@@ -61,27 +59,6 @@ const projects = [
         code: '#'
     }
 ];
-
-// Initialize Theme
-function initTheme() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    body.classList.add(`${savedTheme}-theme`);
-    
-    const icon = themeToggle.querySelector('i');
-    icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-}
-
-// Toggle Theme
-function toggleTheme() {
-    body.classList.toggle('dark-theme');
-    body.classList.toggle('light-theme');
-    
-    const isDark = body.classList.contains('dark-theme');
-    const icon = themeToggle.querySelector('i');
-    icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-    
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-}
 
 // Toggle Mobile Navigation
 function toggleMobileNav() {
@@ -218,9 +195,6 @@ function init() {
     // Set current year in footer
     currentYear.textContent = new Date().getFullYear();
     
-    // Initialize theme
-    initTheme();
-    
     // Render dynamic content
     renderSkills();
     renderProjects();
@@ -230,7 +204,6 @@ function init() {
     createCodeBackground();
     
     // Set up event listeners
-    themeToggle.addEventListener('click', toggleTheme);
     toggleBtn.addEventListener('click', toggleMobileNav);
     navItems.forEach(item => item.addEventListener('click', closeMobileMenu));
     contactForm.addEventListener('submit', handleFormSubmit);
