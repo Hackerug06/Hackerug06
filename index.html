@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackerug06 | Full Stack Developer</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/themes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,178 +13,265 @@
     <header>
         <div class="container">
             <a href="#" class="logo">
-                <img src="images/logo.png" alt="Hackerug06 Logo">
+                <img src="assets/logo.png" alt="Hackerug06 Logo">
                 <span class="logo-text">Hackerug06</span>
             </a>
-            <nav>
-                <div class="nav-content">
-                    <ul class="nav-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <div class="nav-right">
-                        <div class="theme-toggle">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                        </div>
-                        <div class="hamburger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
+            <nav class="navbar">
+                <button class="toggle-btn" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="coding-background"></div>
-        <div class="hero-content">
-            <h1 class="animated-heading">
-                <span class="letter">H</span>
-                <span class="letter">a</span>
-                <span class="letter">c</span>
-                <span class="letter">k</span>
-                <span class="letter">e</span>
-                <span class="letter">r</span>
-                <span class="letter">u</span>
-                <span class="letter">g</span>
-                <span class="letter">0</span>
-                <span class="letter">6</span>
-            </h1>
-            <h2>Full Stack Developer</h2>
-            <p>Creating innovative digital solutions with cutting-edge technologies</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn">Hire Me</a>
-                <a href="#portfolio" class="btn btn-outline">View Work</a>
+    <main>
+        <section id="home" class="hero">
+            <div class="code-background"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="animated-heading">Hackerug06</h1>
+                    <h2>Full Stack Developer</h2>
+                    <p>Creating innovative digital solutions with cutting-edge technologies</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">Hire Me</a>
+                        <a href="#about" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a passionate full-stack developer with expertise in both frontend and backend technologies. With years of experience in web development, software engineering, and teaching ICT, I bring comprehensive solutions to digital challenges.</p>
-                    <p>My skill set includes JavaScript, TypeScript, Angular, Vue.js, React, and various other modern web technologies. I specialize in creating responsive, user-friendly applications that deliver exceptional user experiences.</p>
-                    <div class="skills">
-                        <h3>Technical Skills</h3>
-                        <div class="skill-tags">
-                            <span>JavaScript</span>
-                            <span>TypeScript</span>
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>Angular</span>
-                            <span>Vue.js</span>
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>Mobile Development</span>
-                            <span>Web Applications</span>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm a passionate full-stack developer with expertise in both frontend and backend development. With years of experience in web and mobile application development, I create robust, scalable, and user-friendly solutions.</p>
+                        <p>I also enjoy teaching ICT and coding, helping others to develop their skills in technology and programming.</p>
+                        <div class="personal-info">
+                            <div class="info-item">
+                                <span>Name:</span>
+                                <p>Hackerug06</p>
+                            </div>
+                            <div class="info-item">
+                                <span>Email:</span>
+                                <p>hackerug06@gmail.com</p>
+                            </div>
+                            <div class="info-item">
+                                <span>Phone:</span>
+                                <p>+256761399903</p>
+                            </div>
+                            <div class="info-item">
+                                <span>Experience:</span>
+                                <p>5+ Years</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <img src="https://via.placeholder.com/400x400" alt="Hackerug06">
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-placeholder"></div>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="services" class="section">
-        <div class="container">
-            <h2 class="section-title">Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Web Development</h3>
-                    <p>Custom website development from simple landing pages to complex web applications using modern frameworks.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Mobile Development</h3>
-                    <p>Cross-platform mobile application development for iOS and Android using the latest technologies.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-server"></i>
-                    <h3>Backend Development</h3>
-                    <p>Robust backend systems, APIs, and database solutions to power your applications.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <h3>ICT & Coding Instruction</h3>
-                    <p>Comprehensive training in programming, web development, and information technology concepts.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>User-centered design solutions that enhance usability and create engaging digital experiences.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Software Solutions</h3>
-                    <p>Custom software development tailored to your specific business needs and requirements.</p>
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title">My Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Custom website development from simple landing pages to complex web applications.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Development</h3>
+                        <p>Cross-platform mobile applications that work seamlessly on iOS and Android.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend Development</h3>
+                        <p>Robust server-side solutions, APIs, and database management systems.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>ICT Teaching</h3>
+                        <p>Comprehensive ICT and coding lessons tailored to your learning needs.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="portfolio" class="section">
-        <div class="container">
-            <h2 class="section-title">Portfolio</h2>
-            <div class="portfolio-grid">
-                <!-- Portfolio items will be added dynamically via JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> +256 761 399903</li>
-                        <li><i class="fas fa-phone"></i> +256 753 979539</li>
-                        <li><i class="fas fa-envelope"></i> hackerug06@gmail.com</li>
-                        <li><i class="fas fa-envelope"></i> hackerugg06@gmail.com</li>
-                    </ul>
-                    <div class="social-links">
-                        <a href="https://github.com/hackerug06" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://youtube.com/hackerug06" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://twitter.com/hackerug06" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://instagram.com/hackerug06" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://facebook.com/hackerug06" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="https://wa.me/256753979539" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>JavaScript (JS)</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTML/CSS</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>TypeScript (TS)</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Angular</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Vue.js</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-image">
+                        <img src="https://via.placeholder.com/500x300" alt="Skills Visualization">
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Phone</h3>
+                                <p>+256761399903</p>
+                                <p>+256753979539</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <p>hackerug06@gmail.com</p>
+                                <p>hackerugg06@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Social Media</h3>
+                                <div class="social-links">
+                                    <a href="https://instagram.com/hackerug06" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://facebook.com/hackerug06" target="_blank"><i class="fab fa-facebook"></i></a>
+                                    <a href="https://twitter.com/hackerug06" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://wa.me/256753979539" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" placeholder="Subject">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="year"></span> Hackerug06. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#" class="logo">
+                        <img src="assets/logo.png" alt="Hackerug06 Logo">
+                        <span>Hackerug06</span>
+                    </a>
+                    <p>Full Stack Developer creating innovative digital solutions with cutting-edge technologies.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +256761399903</li>
+                        <li><i class="fas fa-envelope"></i> hackerug06@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Uganda</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Hackerug06. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
