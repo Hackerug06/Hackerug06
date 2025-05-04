@@ -37,4 +37,25 @@ document.addEventListener('DOMContentLoaded', function() {
             codeLine.style.background = `rgba(255, 255, 255, ${Math.random() * 0.2 + 0.1})`;
             codeLine.style.transform = `rotate(${Math.random() * 360}deg)`;
             codeLine.style.animation = `float ${Math.random() * 20 + 10}s linear infinite`;
-            codeLine.style.animationDelay = `${
+            codeLine.style.animationDelay = `${Math.random() * 5}s`;
+            
+            codingBackground.appendChild(codeLine);
+        }
+        
+        // Add CSS for animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0% {
+                    transform: translateY(0) rotate(${Math.random() * 360}deg);
+                    opacity: ${Math.random() * 0.5 + 0.1};
+                }
+                100% {
+                    transform: translateY(-100vh) rotate(${Math.random() * 360}deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+});
