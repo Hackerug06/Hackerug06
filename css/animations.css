@@ -1,150 +1,70 @@
-/* Typing Animation */
-.animate-typing {
-    position: relative;
-    display: inline-block;
-}
-
-.animate-typing::after {
-    content: '|';
-    position: absolute;
-    right: -0.5rem;
-    animation: blink 1s infinite;
-    color: var(--primary-color);
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-/* Pulse Animation */
-.pulse {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(var(--primary-color), 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 1rem rgba(var(--primary-color), 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(var(--primary-color), 0);
-    }
-}
-
-/* Fade In Animation */
-.fade-in {
-    animation: fadeIn 1s ease-in;
-}
-
+/* Animated Heading */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* Slide Up Animation */
-.slide-up {
-    animation: slideUp 0.8s ease-out;
+@keyframes slideInFromLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
-@keyframes slideUp {
-    from { 
-        opacity: 0;
-        transform: translateY(2rem);
-    }
-    to { 
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes slideInFromRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
-/* Floating Animation */
-.floating {
-    animation: floating 3s ease-in-out infinite;
+@keyframes slideInFromTop {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes floating {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-1rem); }
+@keyframes slideInFromBottom {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.animated-heading {
+    animation: fadeIn 1s ease-in-out, slideInFromTop 1s ease-in-out;
+}
+
+.hero-content .subtitle {
+    animation: fadeIn 1s ease-in-out 0.5s both, slideInFromBottom 1s ease-in-out 0.5s both;
+}
+
+.cta-buttons {
+    animation: fadeIn 1s ease-in-out 1s both;
 }
 
 /* Code Background Animation */
 .code-line {
-    position: absolute;
-    color: rgba(255, 255, 255, 0.1);
-    font-family: 'Fira Code', monospace;
-    font-size: 0.875rem;
+    font-family: 'Courier New', monospace;
+    color: var(--primary-color);
     white-space: nowrap;
-    animation: float 15s linear infinite;
-    user-select: none;
+    animation: scroll 30s linear infinite;
+    margin-bottom: 15px;
+    font-size: 14px;
 }
 
-@keyframes float {
-    0% {
-        transform: translateY(100vh) translateX(0);
-        opacity: 0;
-    }
-    10% {
-        opacity: 0.1;
-    }
-    90% {
-        opacity: 0.1;
-    }
-    100% {
-        transform: translateY(-10vh) translateX(20px);
-        opacity: 0;
-    }
+@keyframes scroll {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100%); }
 }
 
-/* Animate on Scroll */
-[data-aos] {
+/* Section Animations */
+.section {
     opacity: 0;
-    transition: all 0.8s ease;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-[data-aos].aos-animate {
+.section.visible {
     opacity: 1;
-    transform: none;
-}
-
-.aos-fade-up {
-    transform: translateY(2rem);
-}
-
-.aos-fade-down {
-    transform: translateY(-2rem);
-}
-
-.aos-fade-left {
-    transform: translateX(-2rem);
-}
-
-.aos-fade-right {
-    transform: translateX(2rem);
-}
-
-.aos-zoom-in {
-    transform: scale(0.9);
-}
-
-.aos-zoom-out {
-    transform: scale(1.1);
-}
-
-.aos-flip-left {
-    transform: perspective(1000px) rotateY(-90deg);
-}
-
-.aos-flip-right {
-    transform: perspective(1000px) rotateY(90deg);
-}
-
-.aos-flip-up {
-    transform: perspective(1000px) rotateX(-90deg);
-}
-
-.aos-flip-down {
-    transform: perspective(1000px) rotateX(90deg);
+    transform: translateY(0);
 }
