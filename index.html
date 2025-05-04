@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hackerug06 | Full Stack Developer</title>
+    <title>Full Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://via.placeholder.com/32x32/3498db/ffffff?text=H06" type="image/x-icon">
 </head>
-<body>
+<body class="light-theme">
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <!-- Header -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="https://via.placeholder.com/40x40/3498db/ffffff?text=H06" alt="Hackerug06 Logo" id="logo">
-                <span class="logo-text">Hackerug06</span>
+                <img src="https://via.placeholder.com/40x40/3498db/ffffff?text=H06" alt="Hackerug06 Logo">
+                <span class="logo-text animated-heading">Hackerug06</span>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
@@ -30,14 +35,12 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <!-- Animated Coding Background -->
         <div class="coding-background" id="codingBackground"></div>
-        
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Hi, I'm <span>Hackerug06</span></h1>
-                <h1>Full Stack Developer</h1>
-                <p>I create beautiful, functional websites and applications with cutting-edge technologies. With expertise in both frontend and backend development, I deliver complete solutions tailored to your needs.</p>
+                <h1>Hi, I'm <span class="highlight">Hackerug06</span></h1>
+                <h2>Full Stack Developer</h2>
+                <p class="hero-description">I create beautiful, functional websites and applications with cutting-edge technologies.</p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary">Hire Me</a>
                     <a href="#projects" class="btn btn-secondary">My Work</a>
@@ -59,22 +62,22 @@
             <div class="skill-card">
                 <i class="fas fa-code"></i>
                 <h3>Frontend Development</h3>
-                <p>HTML5, CSS3, JavaScript, TypeScript, React, Angular, Vue.js, Responsive Design, UI/UX Principles</p>
+                <p>HTML5, CSS3, JavaScript, TypeScript, React, Angular, Vue.js</p>
             </div>
             <div class="skill-card">
                 <i class="fas fa-server"></i>
                 <h3>Backend Development</h3>
-                <p>Node.js, Express, RESTful APIs, Database Design, Authentication, Server-side Logic, API Integration</p>
+                <p>Node.js, Express, RESTful APIs, Database Design, Authentication</p>
             </div>
             <div class="skill-card">
                 <i class="fas fa-mobile-alt"></i>
                 <h3>Mobile Development</h3>
-                <p>React Native, Progressive Web Apps, Mobile-first Design, Cross-platform Development</p>
+                <p>React Native, Progressive Web Apps, Cross-platform Development</p>
             </div>
             <div class="skill-card">
                 <i class="fas fa-chalkboard-teacher"></i>
                 <h3>Teaching & Mentoring</h3>
-                <p>ICT Education, Coding Instruction, Curriculum Development, Technical Workshops</p>
+                <p>ICT Education, Coding Instruction, Technical Workshops</p>
             </div>
         </div>
     </section>
@@ -92,7 +95,7 @@
                 </div>
                 <div class="project-info">
                     <h3>E-Commerce Platform</h3>
-                    <p>A full-featured online store with product management, cart functionality, and secure checkout.</p>
+                    <p>A full-featured online store with product management and secure checkout.</p>
                     <div class="project-tags">
                         <span class="tag">React</span>
                         <span class="tag">Node.js</span>
@@ -104,42 +107,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400/3498db/ffffff?text=Learning+App" alt="Learning Management System">
-                </div>
-                <div class="project-info">
-                    <h3>Learning Management System</h3>
-                    <p>An online platform for teaching coding with course management and student progress tracking.</p>
-                    <div class="project-tags">
-                        <span class="tag">Angular</span>
-                        <span class="tag">Firebase</span>
-                        <span class="tag">TypeScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#"><i class="fab fa-github"></i> Source Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400/3498db/ffffff?text=Mobile+App" alt="Fitness Tracker App">
-                </div>
-                <div class="project-info">
-                    <h3>Fitness Tracker App</h3>
-                    <p>A mobile application for tracking workouts, nutrition, and fitness progress.</p>
-                    <div class="project-tags">
-                        <span class="tag">React Native</span>
-                        <span class="tag">Redux</span>
-                        <span class="tag">Firebase</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> App Store</a>
-                        <a href="#"><i class="fab fa-github"></i> Source Code</a>
-                    </div>
-                </div>
-            </div>
+            <!-- Add more project cards as needed -->
         </div>
     </section>
 
@@ -147,7 +115,7 @@
     <section class="contact" id="contact">
         <div class="section-title">
             <h2>Get In Touch</h2>
-            <p>Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
+            <p>Have a project in mind or want to discuss potential opportunities?</p>
         </div>
         <div class="contact-container">
             <div class="contact-info">
@@ -159,50 +127,12 @@
                         <p><a href="tel:+256753979539">+256 753 979539</a></p>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div class="contact-text">
-                        <h3>Email</h3>
-                        <p><a href="mailto:hackerug06@gmail.com">hackerug06@gmail.com</a></p>
-                        <p><a href="mailto:hackerugg06@gmail.com">hackerugg06@gmail.com</a></p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div class="contact-text">
-                        <h3>Location</h3>
-                        <p>Kampala, Uganda</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-clock"></i>
-                    <div class="contact-text">
-                        <h3>Working Hours</h3>
-                        <p>Monday - Friday: 9am - 5pm</p>
-                        <p>Weekends: Available for urgent projects</p>
-                    </div>
-                </div>
+                <!-- Add more contact items -->
             </div>
             <div class="contact-form">
                 <h3>Send Me a Message</h3>
                 <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <!-- Form fields here -->
                 </form>
             </div>
         </div>
@@ -212,18 +142,9 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">Hackerug06</div>
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
             <div class="social-links">
-                <a href="https://facebook.com/hackerug06" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com/hackerug06" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com/hackerug06" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://github.com/hackerug06" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/hackerug06" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <!-- Add more social links -->
             </div>
             <div class="copyright">
                 &copy; <span id="currentYear"></span> Hackerug06. All Rights Reserved.
@@ -236,23 +157,6 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- WhatsApp Popup -->
-    <div class="whatsapp-popup" id="whatsappPopup">
-        <div class="popup-header">
-            <h3>Chat with me</h3>
-            <button class="close-popup" id="closePopup">&times;</button>
-        </div>
-        <div class="popup-body">
-            <p>Hi there! How can I help you today?</p>
-            <p>You can message me directly on WhatsApp for quick responses.</p>
-        </div>
-        <div class="popup-footer">
-            <a href="https://wa.me/256753979539" class="whatsapp-btn">
-                <i class="fab fa-whatsapp"></i> Start Chat
-            </a>
-        </div>
-    </div>
-
     <script src="script.js"></script>
 </body>
-                        </html>
+                </html>
