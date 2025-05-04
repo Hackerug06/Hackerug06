@@ -347,24 +347,80 @@ a:hover {
     gap: 50px;
     align-items: center;
 }
-
+/* Circular Profile Image Styles */
 .about-image {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .image-frame {
-    width: 350px;
-    height: 350px;
-    border-radius: 20px;
+    width: 100%;
+    max-width: 350px; /* Controls maximum size */
+    aspect-ratio: 1/1; /* Ensures perfect circle */
+    border-radius: 50%; /* Makes it circular */
     overflow: hidden;
+    border: 5px solid var(--primary-color);
     box-shadow: var(--shadow);
+    position: relative;
+    transition: var(--transition);
 }
 
 .image-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    transition: var(--transition);
+}
+
+/* Hover Effects */
+.image-frame:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--secondary-color);
+}
+
+.image-frame:hover img {
+    transform: scale(1.05);
+}
+
+/* Glow Effect */
+.image-frame::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: inset 0 0 30px rgba(52, 152, 219, 0.3);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.image-frame:hover::after {
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .about-image {
+        order: -1; /* Moves image above text on mobile */
+        margin-bottom: 30px;
+    }
+    
+    .image-frame {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-frame {
+        max-width: 220px;
+        border-width: 3px;
+    }
 }
 
 .personal-info {
