@@ -89,12 +89,12 @@ document.addEventListener('DOMContentLoaded', function() {
             codeLink: "https://github.com/Hackerug06/shemaking"
         },
         {
-            title: "Task Management App",
+            title: "Tic-Tac-Toe Game",
             description: "A productivity application for managing tasks with team collaboration features.",
             technologies: ["Vue.js", "Firebase"],
-            image: "https://via.placeholder.com/600x400?text=Task+Management",
-            liveLink: "#",
-            codeLink: "#"
+            image: "assets/tic-tac-toe.jpg",
+            liveLink: "https://neon-tic-tac-toe-game1.vercel.app/",
+            codeLink: "https://github.com/Hackerug06/neon-tic-tac-toe"
         },
         {
             title: "Mobile Fitness Tracker",
