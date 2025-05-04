@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Upcoming Artist Website",
             description: "A full-featured online store with payment integration and admin dashboard.",
             technologies: ["typescript", "Node.js"],
-            image: "Home1.jpg",
+            image: "assets/Home1.jpg",
             liveLink: "https://shemaking0001.netlify.app/",
             codeLink: "https://github.com/Hackerug06/shemaking"
         },
