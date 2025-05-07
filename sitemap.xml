@@ -3,7 +3,7 @@
     <!-- Main Site (yourdomain.com) -->
     <url>
         <loc>https://hackerug06.site/</loc>
-        <lastmod>2025-05-7</lastmod>  <!-- Update date to today -->
+        <lastmod>2025-05-07</lastmod>  <!-- Update date to today -->
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -11,7 +11,7 @@
     <!-- Second Site (yourdomain.com/second-site/) -->
     <url>
         <loc>https://hackerug06.site/second-site/</loc>
-        <lastmod>2025-05-7</lastmod>
+        <lastmod>2025-05-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
