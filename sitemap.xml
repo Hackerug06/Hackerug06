@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://hackerug06.site/</loc>
-  <lastmod>2025-05-04T17:27:30+00:00</lastmod>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Main Site (yourdomain.com) -->
+    <url>
+        <loc>https://hackerug06.site/</loc>
+        <lastmod>2025-05-7</lastmod>  <!-- Update date to today -->
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Second Site (yourdomain.com/second-site/) -->
+    <url>
+        <loc>https://hackerug06.site/second-site/</loc>
+        <lastmod>2025-05-7</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
